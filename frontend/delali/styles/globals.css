@@ -1,3 +1,150 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  @apply bg-bg_primary text-custom_white w-screen;
+}
+
+section {
+  @apply min-h-screen w-full flex flex-col justify-center;
+}
+
+.heading_secondary {
+  @apply text-3xl text-white font-bold;
+}
+
+input {
+  @apply p-2 bg-gray-700 rounded-sm;
+}
+
+.btn {
+  @apply relative h-14 w-40 my-4;
+}
+
+.btn a {
+  transition: 0.5s;
+  letter-spacing: 1px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  @apply absolute top-0 left-0 w-full h-full flex justify-center items-center  shadow-lg border-t-2 border-b-2 rounded-full border-white/10 text-white z-10 font-semibold overflow-hidden;
+}
+.glow::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.glow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.glow::before,
+.glow::after {
+  box-shadow: 0 0 5px #ff1f71, 0 0 5px #ff1f71, 0 0 15px #ff1f71,
+    0 0 30px #ff1f71, 0 0 60px #ff1f71;
+}
+
+.btn:hover a {
+  letter-spacing: 3px;
+}
+.btn:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+.btn:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.btn a::before {
+  content: "";
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transition: 0.5s;
+  transform: skewX(45deg) translateX(0);
+  @apply absolute top-0 left-0 w-1/2 h-full;
+}
+.btn:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+.add_smoke {
+  @apply animate-smoke origin-bottom;
+}
+
+/* ========PORFOLIO======== */
+
+.project {
+  @apply animate-reveal_down z-30;
+}
+/* .project:hover {
+  @apply animate-reveal_top -z-30 blur-lg;
+} */
+
+.card {
+  @apply relative w-72 h-96 shadow-xl bg-white/10
+border-t-2 border-l-2 border-t-white/10 border-l-white/10 overflow-hidden flex items-center justify-center backdrop-blur-lg rounded-lg;
+}
+
+.card .content {
+  transition: 0.5s;
+  @apply p-5 text-center translate-y-24 opacity-0 flex flex-col items-center;
+}
+.card:hover .content {
+  @apply translate-y-0 opacity-100;
+}
+.card .content h2 {
+  @apply absolute -top-10 right-7 text-8xl text-white/5 pointer-events-none;
+}
+.card .content h3 {
+  @apply text-xl text-white font-bold;
+}
+.contact input {
+  @apply rounded-lg w-10/12;
+}
+
+.hide {
+  transition: opacity 2s ease-in-out 0.3s;
+  @apply opacity-0;
+}
+
+/*  .card .content a {
+  @apply relative inline-block px-5 py-2 mt-4 bg-white text-black rounded-lg font-bold shadow-lg;
+} */
+
+/* section::before {
+  content: "";
+  background: linear-gradient(#f00, #f0f);
+  clip-path: circle(30% at right);
+  @apply absolute top-0 left-0 w-56 h-full;
+}
+section::after {
+  content: "";
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(20% at 10% 10%);
+  @apply absolute top-0 left-0 w-full h-full;
+} */
