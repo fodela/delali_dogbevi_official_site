@@ -6,7 +6,7 @@ const About = () => {
   const infoArray = aboutInfo.split("");
   console.log(infoArray);
 
-  const animationHandler: MouseEventHandler = (e) => {
+  const animationHandler: MouseEventHandler = (e: any) => {
     if (!e.target.className.includes("animate-smoke")) {
       e.target.className += " animate-smoke";
     }
