@@ -8,7 +8,7 @@ interface SkillsCardProps {
 }
 
 const SkillsCard: React.FC<SkillsCardProps> = ({ skill }) => {
-  const tiltRef = useRef<HTMLDivElement>();
+  const tiltRef = useRef<any>();
   useEffect(() => {
     VanillaTilt.init(tiltRef.current!, {
       max: 25,
