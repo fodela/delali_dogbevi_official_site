@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Layout from "../components/Layout/Layout";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Skills from "../components/Skills/Skills";
+import Testimonial from "../components/Testimonial/Testimonial";
 const Home: NextPage = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         <Portfolio />
         <About />
         <Skills />
+        <Testimonial />
         <Contact />
       </Layout>
     </>
