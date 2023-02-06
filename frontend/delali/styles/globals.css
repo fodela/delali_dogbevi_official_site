@@ -11,7 +11,7 @@ body {
 }
 
 section {
-  @apply min-h-screen w-full flex flex-col justify-center;
+  @apply relative min-h-screen w-full flex flex-col justify-center;
 }
 
 .heading_secondary {
@@ -148,3 +148,23 @@ section::after {
   clip-path: circle(20% at 10% 10%);
   @apply absolute top-0 left-0 w-full h-full;
 } */
+.space_out {
+  transition: all 0.2s ease-in;
+  box-shadow: -0.5rem 0 3rem #000;
+}
+.testimonial .space_out:not(:first-child) {
+  @apply -ml-40;
+}
+
+.space_out:hover {
+  transform: translateY(-1rem) scale(1.05);
+  z-index: 1;
+  box-shadow: 0.5rem 0 3rem #000;
+}
+.space_out:hover ~ .card {
+  @apply translate-x-40;
+}
+
+.bg_header {
+  @apply text-[12rem] font-bold absolute top-1 text-white/10;
+}
