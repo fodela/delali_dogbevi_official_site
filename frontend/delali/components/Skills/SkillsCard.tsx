@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { BsBullseye } from "react-icons/bs";
 
 import VanillaTilt from "vanilla-tilt";
 import GlassyButton from "../GlassyButton";
@@ -21,11 +22,13 @@ const SkillsCard: React.FC<SkillsCardProps> = ({ skill }) => {
     <article className="">
       <div className="card" ref={tiltRef}>
         <div className="content ">
-          <h2>01</h2>
+          <h2>
+            <BsBullseye />
+          </h2>
           <h3>{skill.Field}</h3>
-          <ul>
-            {skill.list.map((item) => (
-              <li>{item}</li>
+          <ul className="text-left">
+            {skill.list.map((item, index) => (
+              <li key={index}>{item}</li>
             ))}
           </ul>
           <GlassyButton />

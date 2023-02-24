@@ -1,21 +1,44 @@
-import { useEffect, useRef } from "react";
-import VanillaTilt from "vanilla-tilt";
 import GlassyButton from "../GlassyButton";
 import SkillsCard from "./SkillsCard";
 
 const allSkills = [
   {
-    Field: "Programming Languages",
-    list: ["PYTHON", "JAVASCRIPT", "HTML", "CSS", "SQL"],
+    Field: "FRONTEND",
+    list: [
+      "HTML",
+      "CSS",
+      "JAVASCRIPT",
+      "REACT & REDUX",
+      "NEXTJS",
+      "JEST",
+      "CYPRESS",
+    ],
   },
   {
-    Field: "FRAMEWORKS",
-    list: ["REACT", "NEXTJS", "DJANGO", "FLASK"],
+    Field: "BACKEND",
+    list: [
+      "PYTHON",
+      "FLASK",
+      "DJANGO",
+      "PYTEST",
+      "AUTH0",
+      "DOCKER",
+      "FIREBASE",
+      "AWS & KUBERNETES",
+    ],
   },
 
   {
-    Field: "TOOLS",
-    list: ["GIT", "POSTGRES", "FIREBASE", "AUTH0", "DOCKER", "KUBERNETES"],
+    Field: "DATABASES & TOOLS",
+    list: [
+      "SQL",
+      "MONGODB",
+      "FIRESTORE",
+      "POSTGRESQL",
+      "GIT/GITHUB",
+      "MaterialUI",
+      "TailwindCss",
+    ],
   },
   {
     Field: "OTHERS",
@@ -34,11 +57,14 @@ const allSkills = [
 
 const Skills = () => {
   return (
-    <section className="flex w-full">
-      <h2 className="heading_secondary">Skills</h2>
+    <section className="flex w-full" id="skills">
+      <div className="bg_header">Skills</div>
+      <h2 className="heading_secondary">What I can do.</h2>
+      <p>This is the tip of the iceberg.</p>
+      <GlassyButton />
       <div className=" flex flex-wrap justify-center items-center gap-6 w-full">
-        {allSkills.map((skill) => (
-          <SkillsCard skill={skill} />
+        {allSkills.map((skill, index) => (
+          <SkillsCard skill={skill} key={index} />
         ))}
       </div>
     </section>

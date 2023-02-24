@@ -11,7 +11,7 @@ body {
 }
 
 section {
-  @apply relative min-h-screen w-full flex flex-col justify-center;
+  @apply relative min-h-screen w-full flex flex-col justify-center overflow-hidden pb-10;
 }
 
 .heading_secondary {
@@ -121,10 +121,10 @@ border-t-2 border-l-2 border-t-white/10 border-l-white/10 overflow-hidden flex i
   @apply absolute -top-10 right-7 text-8xl text-white/5 pointer-events-none;
 }
 .card .content h3 {
-  @apply text-xl text-white font-bold;
+  @apply text-xl text-white font-bold backdrop-blur;
 }
 .contact input {
-  @apply rounded-lg w-10/12;
+  @apply rounded-lg w-full self-center p-4;
 }
 
 .hide {
@@ -157,7 +157,7 @@ section::after {
 }
 
 .space_out:hover {
-  transform: translateY(-1rem) scale(1.05);
+  transform: translateY(-1rem);
   z-index: 1;
   box-shadow: 0.5rem 0 3rem #000;
 }
@@ -166,5 +166,12 @@ section::after {
 }
 
 .bg_header {
-  @apply text-[12rem] font-bold absolute top-1 text-white/10;
+  @apply text-8xl font-bold absolute top-0 text-white/10;
+}
+
+.scroll_down {
+  @apply text-sm flex flex-col gap-7 items-center;
+}
+.scroll_down p {
+  transform: rotate(90deg);
 }
