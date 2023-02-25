@@ -34,14 +34,14 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
         // onMouseOver={(e) => animationHandler(e)}
         // onMouseLeave={(e) => setTimeout(() => setIsHovered(false), 3000)}
       >
-        <img className="w-full h-3/5 rounded-lg" src="logo.png" alt="" />
+        <img className="w-full  rounded-lg" src={project.gifLink} alt="" />
 
         <h3 className="text-lg font-bold text-white ">{project.title}</h3>
         <p>{project.description}</p>
         <div>
           <span className="font-bold text-lg text-white">Stack: </span>
-          {project.stack.map((skill) => (
-            <span>{skill} </span>
+          {project.stack.map((skill, index) => (
+            <span key={index}>{skill} </span>
           ))}
         </div>
       </div>
