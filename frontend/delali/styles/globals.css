@@ -14,8 +14,14 @@ section {
   @apply relative min-h-screen w-full flex flex-col justify-center overflow-hidden pb-10;
 }
 
+.heading_primary {
+  font-size: 10vmin;
+  @apply font-bold text-white;
+}
+
 .heading_secondary {
-  @apply text-3xl text-white font-bold;
+  font-size: 6vmin;
+  @apply text-white font-bold;
 }
 
 input {
@@ -41,7 +47,7 @@ input {
   bottom: -5px;
   width: 30px;
   height: 10px;
-  background: #f00;
+  background: #00ffff;
   border-radius: 10px;
   transition: 0.5s;
 }
@@ -53,14 +59,14 @@ input {
   top: -5px;
   width: 30px;
   height: 10px;
-  background: #f00;
+  background: #00ffff;
   border-radius: 10px;
   transition: 0.5s;
 }
 .glow::before,
 .glow::after {
-  box-shadow: 0 0 5px #ff1f71, 0 0 5px #ff1f71, 0 0 15px #ff1f71,
-    0 0 30px #ff1f71, 0 0 60px #ff1f71;
+  box-shadow: 0 0 5px #7aeded, 0 0 5px #7aeded, 0 0 15px #7aeded,
+    0 0 30px #7aeded, 0 0 60px #7aeded;
 }
 
 .btn:hover a {
@@ -123,8 +129,18 @@ border-t-2 border-l-2 border-t-white/10 border-l-white/10 overflow-hidden flex i
 .card .content h3 {
   @apply text-xl text-white font-bold backdrop-blur;
 }
-.contact input {
-  @apply rounded-lg w-full self-center p-4;
+
+.contact {
+  @apply p-4 bg-white/10 rounded-lg max-w-screen-lg w-full m-auto border-t-white/10 border-l-white/10 backdrop-blur-sm;
+}
+.contact input,
+.contact select,
+textarea {
+  @apply rounded-md w-full self-center p-4  border border-white/50 backdrop-blur-lg outline-none bg-transparent;
+}
+
+select option {
+  @apply bg-transparent;
 }
 
 .hide {
@@ -132,24 +148,8 @@ border-t-2 border-l-2 border-t-white/10 border-l-white/10 overflow-hidden flex i
   @apply opacity-0;
 }
 
-/*  .card .content a {
-  @apply relative inline-block px-5 py-2 mt-4 bg-white text-black rounded-lg font-bold shadow-lg;
-} */
-
-/* section::before {
-  content: "";
-  background: linear-gradient(#f00, #f0f);
-  clip-path: circle(30% at right);
-  @apply absolute top-0 left-0 w-56 h-full;
-}
-section::after {
-  content: "";
-  background: linear-gradient(#2196f3, #e91e63);
-  clip-path: circle(20% at 10% 10%);
-  @apply absolute top-0 left-0 w-full h-full;
-} */
 .space_out {
-  transition: all 0.2s ease-in;
+  transition: all 0.4s ease-in-out;
   box-shadow: -0.5rem 0 3rem #000;
 }
 .testimonial .space_out:not(:first-child) {
@@ -160,13 +160,15 @@ section::after {
   transform: translateY(-1rem);
   z-index: 1;
   box-shadow: 0.5rem 0 3rem #000;
+  /* transition: z-index 1s; */
 }
 .space_out:hover ~ .card {
   @apply translate-x-40;
 }
 
 .bg_header {
-  @apply text-8xl font-bold absolute top-0 text-white/10;
+  font-size: 17vmin;
+  @apply font-bold absolute top-0 text-white/10;
 }
 
 .scroll_down {
