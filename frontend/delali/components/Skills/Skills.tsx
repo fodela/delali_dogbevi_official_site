@@ -8,6 +8,7 @@ const allSkills = [
       "HTML",
       "CSS",
       "JAVASCRIPT",
+      "TYPESCRIPT",
       "REACT & REDUX",
       "NEXTJS",
       "JEST",
@@ -60,7 +61,7 @@ const Skills = () => {
     <section className="flex w-full" id="skills">
       <div className="bg_header">Skills</div>
       <h2 className="heading_secondary">What I can do.</h2>
-      <p>This is the tip of the iceberg.</p>
+      <p>This is just the tip of the iceberg.</p>
       <GlassyButton />
       <div className=" flex flex-wrap justify-center items-center gap-6 w-full">
         {allSkills.map((skill, index) => (
