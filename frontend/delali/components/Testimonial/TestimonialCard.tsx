@@ -29,10 +29,10 @@ const TestimonialCard = ({ recommendation }: RecommendationType) => {
               {recommendation.name && recommendation.name}
             </a>
           </h3>
-          <p className="textxs">
+          <p className="text-xs">
             {recommendation.title && recommendation.title}
           </p>
-          <p className="textxs">
+          <p className="text-xs">
             {recommendation.company && recommendation.company}
           </p>
         </div>

@@ -24,8 +24,8 @@ const Testimonial: React.FC = () => {
       </div>
       <h2 className="heading_secondary mb-8">What Others Say about Me!</h2>
       <div className="testimonial container flex justify-center h-full rounded-lg self-center">
-        {recommendations.map((recommendation) => (
-          <TestimonialCard recommendation={recommendation} />
+        {recommendations.map((recommendation, index) => (
+          <TestimonialCard recommendation={recommendation} key={index} />
         ))}
       </div>
     </section>

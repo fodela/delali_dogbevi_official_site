@@ -29,7 +29,11 @@ const Contact = () => {
                 Select country code
               </option>
               {countryCodes.map((code) => (
-                <option className="bg-blue-500" value={code.dial_code}>
+                <option
+                  key={code.code}
+                  className="bg-blue-500"
+                  value={code.dial_code}
+                >
                   {code.name}: {code.dial_code}
                 </option>
               ))}
