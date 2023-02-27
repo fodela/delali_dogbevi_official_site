@@ -6,10 +6,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/swiper": "^6.0.0",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
+    "react-scroll": "^1.8.9",
+    "swiper": "^9.0.2",
     "vanilla-tilt": "^1.8.0"
   },
   "devDependencies": {
