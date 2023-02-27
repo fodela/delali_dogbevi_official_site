@@ -1,9 +1,9 @@
 import React from "react";
 
-const GlassyButton = ({ name = "Read More", glow = "" }) => {
+const GlassyButton = ({ name = "Read More", glow = "", link = "#" }) => {
   return (
     <div className={`btn ${glow && "glow"}`}>
-      <a href="#">{name}</a>
+      <a href={link}>{name}</a>
     </div>
   );
 };
