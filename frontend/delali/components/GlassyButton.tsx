@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const GlassyButton = ({
@@ -5,12 +6,13 @@ const GlassyButton = ({
   glow = "",
   link = "#",
   target = "",
+  action = () => {},
 }) => {
   return (
-    <div className={`btn ${glow && "glow"}`}>
-      <a href={link} target={target}>
+    <div className={`btn ${glow && "glow"}`} onClick={() => action()}>
+      <Link href={link} target="_blank">
         {name}
-      </a>
+      </Link>
     </div>
   );
 };
