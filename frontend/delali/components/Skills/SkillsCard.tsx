@@ -1,7 +1,5 @@
-import { useEffect, useRef } from "react";
 import { BsBullseye } from "react-icons/bs";
 
-import VanillaTilt from "vanilla-tilt";
 import GlassyButton from "../GlassyButton";
 
 interface SkillsCardProps {
@@ -9,23 +7,14 @@ interface SkillsCardProps {
 }
 
 const SkillsCard: React.FC<SkillsCardProps> = ({ skill }) => {
-  const tiltRef = useRef<any>();
-  useEffect(() => {
-    VanillaTilt.init(tiltRef.current!, {
-      max: 25,
-      speed: 400,
-      glare: true,
-      "max-glare": 1,
-    });
-  }, []);
   return (
     <article className="">
-      <div className="card" ref={tiltRef}>
-        <div className="content ">
+      <div className="card">
+        <div className="content">
           <h2>
-            <BsBullseye />
+            <BsBullseye className="text-color_gray_for_light_mode dark:text-color_gray_for_dark_mode" />
           </h2>
-          <h3>{skill.Field}</h3>
+          <h3 className="mb-2">{skill.Field}</h3>
           <ul className="text-left">
             {skill.list.map((item, index) => (
               <li key={index}>{item}</li>
