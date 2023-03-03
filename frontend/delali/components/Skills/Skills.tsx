@@ -1,4 +1,3 @@
-import GlassyButton from "../GlassyButton";
 import SkillsCard from "./SkillsCard";
 
 const allSkills = [
@@ -62,8 +61,8 @@ const Skills = () => {
       <div className="bg_header">Skills</div>
       <h2 className="heading_secondary">What I can do.</h2>
       <p>This is just the tip of the iceberg.</p>
-      <GlassyButton />
-      <div className=" flex flex-wrap justify-center items-center gap-6 w-full">
+
+      <div className=" flex flex-wrap justify-center items-center gap-6 w-full mt-12">
         {allSkills.map((skill, index) => (
           <SkillsCard skill={skill} key={index} />
         ))}
