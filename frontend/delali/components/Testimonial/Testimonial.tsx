@@ -3,14 +3,31 @@ import TestimonialCard from "./TestimonialCard";
 
 const recommendations = [
   {
-    imageLink:
-      "https://media.licdn.com/dms/image/C5603AQGRnFB-ZHbutQ/profile-displayphoto-shrink_800_800/0/1652103499444?e=1683158400&v=beta&t=M9YMWuPiz2u7p6oGlU35FGX1AVcvZszqtqhbFXgir2k",
+    imageLink: "https://unsplash.it/100/100",
     name: "MaryBlessing Umeh",
     title: "Software Engineer",
-    company: "",
+    company: "Swizel Technologies Limited",
     link: "https://www.linkedin.com/in/marybngozi/",
     testimony:
       "Delali is a passionate Software developer who is able to combine his experience in the medical field and tech to build software applications. He loves learning and assisting others in the team to achieve the goal.",
+  },
+  {
+    imageLink: "https://unsplash.it/100/100",
+    name: "Samson Akanbi",
+    title: "Android Developer",
+    company: "Chemonics",
+    link: "https://www.linkedin.com/in/sakanbi/",
+    testimony:
+      "During our mentoring sessions, he exhibited a profound understanding of the subject matter and asked questions that not only showcased his technical acumen but also demonstrated his critical thinking skills.",
+  },
+  {
+    imageLink: "https://unsplash.it/100/100",
+    name: "Kalu Chinonso",
+    title: "Application Support Analyst",
+    company: "MTN Nigeria",
+    link: "https://www.linkedin.com/in/iamkaluchinonso/",
+    testimony:
+      "Working with Delali was a very great experience as he put his all into his projects. He is willing to learn and adapt to new technologies.",
   },
 ];
 
