@@ -23,7 +23,7 @@ const TestimonialCard = ({ recommendation }: RecommendationType) => {
           className="h-10 rounded-full"
         />
         <div className="">
-          <h3 className="text-lg font-semibold text-white">
+          <h3 className="text-lg font-semibold ">
             <a href={recommendation.link}>
               {" "}
               {recommendation.name && recommendation.name}
@@ -33,7 +33,7 @@ const TestimonialCard = ({ recommendation }: RecommendationType) => {
             {recommendation.title && recommendation.title}
           </p>
           <p className="text-xs">
-            {recommendation.company && recommendation.company}
+            {recommendation.company && `@${recommendation.company}`}
           </p>
         </div>
       </div>
