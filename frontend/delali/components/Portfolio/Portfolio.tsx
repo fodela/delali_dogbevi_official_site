@@ -4,14 +4,14 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    title: "Omnifood",
+    title: "Impact Nutrition Consult",
     description:
-      "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs. We have delivered 250,000+ meals last year!",
+      "The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs.",
     thumbnailLink: "omnifood_laptop.webm",
-    liveLink: "https://omnifood-fo.netlify.app/",
-    stack: ["html", "css", "javascript"],
+    liveLink: "https://impactnutritionconsult.com",
+    stack: ["Nextjs", "TailwindCss", "typescript", "PostgreSQL", "Node"],
     gifLink: "omnifood.gif",
-    githubLink: "https://github.com/fodela/Omnifood-Project",
+    githubLink: "",
   },
   {
     title: "Effect",
@@ -23,15 +23,15 @@ const projects = [
     gifLink: "effect.gif",
     githubLink: "https://github.com/fodela/Effect",
   },
-  // {
-  //   title: "Thykel-Assistant",
-  //   description:
-  //     "Cutting-edge voice recognition technology. Just speak naturally and let ChatGPT do the rest, whether you're a student, researcher, or simply curious. Experience the power of voice-driven AI technology for yourself!",
-  //   thumbnailLink: "effect.gif",
-  //   liveLink: "coming soon.",
-  //   stack: ["React", "Typescript", "Firebase"],
-  //   gifLink: "effect.gif",
-  // },
+  {
+    title: "Thykel-Assistant",
+    description:
+      "Experience AI chatbot with advanced voice recognition. Speak naturally, let ChatGPT handle the rest. Try voice-driven AI technology now!",
+    thumbnailLink: "effect.gif",
+    liveLink: "coming soon.",
+    stack: ["React", "Typescript", "Firebase"],
+    gifLink: "effect.gif",
+  },
 ];
 
 const Portfolio = () => {
@@ -40,7 +40,7 @@ const Portfolio = () => {
       <div className="bg_header">Works</div>
       <h2 className="heading_secondary">What I have done</h2>
       <p>A small gallery of my recent projects</p>
-      <GlassyButton name="See More!" />
+      <GlassyButton name="See More!" link="portfolio" />
       <div className="flex flex-wrap items-center justify-center gap-6">
         {projects.map((project, index) => (
           <ProjectCard project={project} key={index} />
