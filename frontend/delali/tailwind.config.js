@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg_primary: "rgb(24, 24, 24)",
-        custom_white: "rgba(255, 255, 255, 0.7)",
+        color_gray_for_dark_mode: "rgba(255, 255, 255, 0.1)",
+        color_gray_for_light_mode:"rgba(0,0,0,.05)"
       },
       keyframes: {
         reveal_top: {
@@ -97,6 +97,9 @@ module.exports = {
         smoke: "smoke 3s linear forwards",
         hide: "hide 2s linear  ",
       },
+      // fontFamily:{
+      //   sans:["var(--fontName)"]
+      // }
     },
   },
   plugins: [],
