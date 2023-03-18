@@ -31,6 +31,7 @@ const projects = [
     liveLink: "coming soon.",
     stack: ["React", "Typescript", "Firebase"],
     gifLink: "effect.gif",
+    githubLink: "",
   },
 ];
 
