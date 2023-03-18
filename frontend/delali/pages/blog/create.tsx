@@ -1,7 +1,7 @@
 import { FaMapPin } from "react-icons/fa";
 import Accordion from "../../components/Accordion";
 import Dashboard from "../../components/Dashboard";
-import Editor from "../../components/Editor";
+// import Editor from "../../components/Editor";
 import GlassyButton from "../../components/GlassyButton";
 
 const CreateBlogPost = () => {
@@ -17,7 +17,7 @@ const CreateBlogPost = () => {
           />
 
           <div className="flex-grow">
-            <Editor />
+            {/* <Editor /> */}
             <GlassyButton name="Post" />
           </div>
         </main>
