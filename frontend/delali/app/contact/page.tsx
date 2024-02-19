@@ -13,9 +13,7 @@ const index = () => {
           rel="stylesheet"
         />
       </Head>
-      <Layout>
-        <Contact />;
-      </Layout>
+      <Contact />;
     </>
   );
 };

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
@@ -56,6 +57,18 @@ module.exports = {
             display: "none",
           },
         },
+        shuffle: {
+         " 0%":{
+          },
+          "50%":{
+            transform:"translateX(11rem)" ,
+            zIndex: "-10"
+          },
+          "100%":{
+            zIndex: "-10"
+            /* transform:translateX(-10rem) ; */
+          }
+        },
         smoke: {
           "0%": {
             opacity: 1,
@@ -94,6 +107,7 @@ module.exports = {
       animation: {
         reveal_top: "reveal_top 2s  ease-in-out",
         reveal_down: "reveal_down 2s ease-in-out ",
+        shuffle:"shuffle 1s ease-in-out forwards",
         smoke: "smoke 3s linear forwards",
         hide: "hide 2s linear  ",
       },
