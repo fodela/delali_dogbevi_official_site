@@ -1,3 +1,4 @@
+"use client";
 import { MouseEventHandler, useState } from "react";
 import GlassyButton from "../GlassyButton";
 import Image from "next/image";

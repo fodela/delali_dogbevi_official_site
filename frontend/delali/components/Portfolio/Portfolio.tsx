@@ -1,6 +1,7 @@
 import React from "react";
 import GlassyButton from "../GlassyButton";
 import ProjectCard from "./ProjectCard";
+import Image from "next/image";
 
 const projects = [
   {
@@ -37,16 +38,72 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section>
-      <div className="bg_header">Works</div>
-      <h2 className="heading_secondary">What I have done</h2>
-      <p>A small gallery of my recent projects</p>
-      <GlassyButton name="See More!" link="portfolio" />
-      <div className="flex flex-wrap items-center justify-center gap-6">
-        {projects.map((project, index) => (
-          <ProjectCard project={project} key={index} />
-        ))}
-      </div>
+    // <section>
+    //   <div className="bg_header">Works</div>
+    //   <h2 className="heading_secondary">What I have done</h2>
+    //   <p>A small gallery of my recent projects</p>
+    //   <GlassyButton name="See More!" link="portfolio" />
+    //   <div className="flex flex-wrap items-center justify-center gap-6">
+    //     {projects.map((project, index) => (
+    //       <ProjectCard project={project} key={index} />
+    //     ))}
+    //   </div>
+    // </section>
+    <section className="grid md:grid-cols-2 items-center gap-4 mx-auto max-w-screen-lg">
+      {projects.map((project, index) => (
+        <article
+          key={index}
+          className=" border p-4 rounded-lg max-w-lg"
+          title={project.title}
+        >
+          <figure>
+            <Image
+              src={`/${project.gifLink}`}
+              width={500}
+              height={300}
+              className="border rounded"
+              alt={`image `}
+            />
+            <div>Personal project</div>
+            <figcaption className="text-3xl font-bold text-black dark:text-white mt-5 mb-2">
+              {project.title}
+            </figcaption>
+          </figure>
+          <div className="flex flex-col gap-2 text-sm ">
+            <p>{project.description}</p>
+            <div className="flex gap-3">
+              <span className="font-bold text-black dark:text-white">
+                Stack:
+              </span>{" "}
+              <div className="flex gap-2">
+                {project.stack.map((stack) => (
+                  <span>{stack}</span>
+                ))}
+              </div>
+            </div>
+            <div className="flex gap-2 justify-between">
+              <div className="flex flex-col uppercase border-l-2 px-2 py-1 gap-1">
+                <span className="text-xs">completion:</span>{" "}
+                <span className="font-bold text-black dark:text-white">
+                  6 weeks
+                </span>
+              </div>
+              <div className="flex flex-col uppercase border-l-2 px-2 py-1 gap-1">
+                <span className="text-xs">Role:</span>{" "}
+                <span className="font-bold text-black dark:text-white">
+                  Frontend Team-lead
+                </span>
+              </div>
+              <div className="flex flex-col uppercase border-l-2 px-2 py-1 gap-1">
+                <span className="text-xs">View</span>{" "}
+                <span className="font-bold text-black dark:text-white">
+                  Full Detail
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
     </section>
   );
 };

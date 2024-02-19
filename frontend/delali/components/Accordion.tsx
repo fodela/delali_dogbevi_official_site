@@ -1,3 +1,4 @@
+"use client";
 import React, { ReactNode, useState } from "react";
 import { BsCaretDown, BsCaretDownFill } from "react-icons/bs";
 import { FaCaretDown } from "react-icons/fa";
@@ -18,7 +19,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, children }) => {
     <div className="border border-gray-300 rounded-md bg-color_gray_for_light_mode dark:bg-color_gray_for_dark_mode">
       <div
         className="flex items-center justify-between px-4 py-1 cursor-pointer gap-4"
-        onClick={toggleAccordion}
+        // onClick={toggleAccordion}
       >
         <h3 className="text-lg font-medium ">{title}</h3>
 

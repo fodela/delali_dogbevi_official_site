@@ -15,11 +15,11 @@ const SkillsCard: React.FC<SkillsCardProps> = ({ skill }) => {
             <BsBullseye className="text-color_gray_for_light_mode dark:text-color_gray_for_dark_mode" />
           </h2>
           <h3 className="mb-2">{skill.Field}</h3>
-          <ul className="text-left">
+          <div className="text-left">
             {skill.list.map((item, index) => (
-              <li key={index}>{item}</li>
+              <p key={index}>{item}</p>
             ))}
-          </ul>
+          </div>
           <GlassyButton />
         </div>
       </div>

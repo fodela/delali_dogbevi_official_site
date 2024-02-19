@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ChangeEvent, ChangeEventHandler, useState } from "react";
 import GlassyButton from "./GlassyButton";
 import countryCodes from "../public/CountryCodes.json";

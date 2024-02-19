@@ -9,7 +9,10 @@ const GlassyButton = ({
   action = () => {},
 }) => {
   return (
-    <div className={`btn ${glow && "glow"}`} onClick={() => action()}>
+    <div
+      className={`btn ${glow && "glow"}`}
+      // onClick={() => action()  }
+    >
       <Link href={link} target="_blank">
         {name}
       </Link>
